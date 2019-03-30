@@ -1,0 +1,46 @@
+{
+  "name": "cypher-bulma-javascript",
+  "version": "0.1.0",
+  "description": "NPM package with javascript functionality to Cypher Bulma extended theme.",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PayteR/cypher-bulma-javascript.git"
+  },
+  "keywords": [
+    "bulma",
+    "wordpress",
+    "javascript",
+    "scss",
+    "css",
+    "flexbox",
+    "responsive",
+    "framework"
+  ],
+  "author": "Peter \"PayteR\" Gašparík",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/PayteR/cypher-bulma-javascript/issues"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.26.3",
+    "browser-sync-webpack-plugin": "^2.0.1",
+    "cross-env": "^5.2.0",
+    "http-server": "^0.11.1",
+    "laravel-mix": "^4.0.15",
+    "path": "^0.12.7",
+    "resolve-url-loader": "^2.3.2",
+    "webpack-dev-server": "^3.2.1"
+  },
+  "scripts": {
+    "dev": "npm run development",
+    "development": "cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "watch": "cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --watch --open --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "hot": "cross-env NODE_ENV=development webpack-dev-server --inline --hot --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "prod": "npm run production",
+    "production": "cross-env NODE_ENV=production node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "serve": "cross-env NODE_ENV=development webpack-dev-server --inline --config=webpack.server.js",
+    "prepublishOnly": "cross-env npm run prod && git push origin master"
+  },
+  "homepage": "https://github.com/PayteR/cypher-bulma-javascript#readme"
+}
