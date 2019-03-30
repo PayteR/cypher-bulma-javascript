@@ -1,3 +1,0 @@
-/**
- Mobile functionality for navbar
- */

@@ -2,7 +2,7 @@
   "name": "cypher-bulma-javascript",
   "version": "0.1.0",
   "description": "NPM package with javascript functionality to Cypher Bulma extended theme.",
-  "main": "index.js",
+  "main": "js/index.js",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/PayteR/cypher-bulma-javascript.git"
@@ -30,6 +30,7 @@
     "laravel-mix": "^4.0.15",
     "path": "^0.12.7",
     "resolve-url-loader": "^2.3.2",
+    "vue-template-compiler": "^2.6.10",
     "webpack-dev-server": "^3.2.1"
   },
   "scripts": {
