@@ -1,3 +1,4 @@
 {
-    "/public/dist/navbar-mobile.js": "/public/dist/navbar-mobile.js"
+    "/public/dist/navbar-mobile-menu.js": "/public/dist/navbar-mobile-menu.js",
+    "/public/dist/bulma.css": "/public/dist/bulma.css"
 }
