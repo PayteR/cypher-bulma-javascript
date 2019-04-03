@@ -1,5 +1,3 @@
-import { debounce } from "debounce";
-
 /**
  Mobile functionality for navbar
  */
@@ -9,6 +7,7 @@ class NavbarScrollClasses {
   constructor(options, autorun = true) {
     this.options = {
       scrollStartOffset: 0,
+      scrollDebounceDelay: false,
       classIsScroll: 'is-scroll',
       classIsScrollUp: 'is-scroll-up',
       classIsScrollDown: 'is-scroll-down'
@@ -51,9 +50,15 @@ class NavbarScrollClasses {
       }
 
       positionBefore = window.pageYOffset;
+    };
+
+    if(this.options.scrollDebounceDelay) {
+      let debounce = require("debounce");
+      window.addEventListener('scroll', debounce(headerSticky, this.options.scrollDebounceDelay));
+    } else {
+      window.addEventListener('scroll', headerSticky);
     }
 
-    window.addEventListener('scroll', debounce(headerSticky, 100));
   }
 }
 

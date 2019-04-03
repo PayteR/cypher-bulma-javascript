@@ -6,3 +6,5 @@ exports.NavbarScrollClasses = require('./NavbarScrollClasses').default;
 
 exports.PrivacyPolicyPanel = require('./PrivacyPolicyPanel').default;
 
+exports.ProductQuantityInput = require('./ProductQuantityInput').default;
+

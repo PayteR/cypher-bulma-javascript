@@ -13,7 +13,6 @@ class PrivacyPolicyPanel {
       cookieKey: 'cypher-cookies-accepted'
     };
 
-    console.log(Cookies);
     this.options = {...this.options, ...options};
 
     if(autorun) {
@@ -37,7 +36,6 @@ class PrivacyPolicyPanel {
     // Add a click event on each of them
     $privacyPolicyPanels.forEach($container => {
       $container.classList.add(this.options.classOpened);
-      console.log(323)
       $container.querySelectorAll(`.${this.options.classButton}`).forEach($button => {
         $button.addEventListener('click', () => {
           this.setCookie();
