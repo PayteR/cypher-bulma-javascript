@@ -16,7 +16,7 @@ class ProductQuantityInput {
   }
 
   static appendButtons() {
-    $( '.quantity:not(.field.has-addons)' ).each(function (i, el) {
+    $( 'div.quantity:not(.field.has-addons)' ).each(function (i, el) {
       let $container = $(el);
       let $input = $container.find('.qty');
 

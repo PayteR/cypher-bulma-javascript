@@ -1,6 +1,6 @@
 {
   "name": "cypher-bulma-javascript",
-  "version": "0.1.8",
+  "version": "0.1.9",
   "description": "NPM package with javascript functionality to Cypher Bulma extended theme.",
   "main": "index.js",
   "repository": {
@@ -36,7 +36,7 @@
   "dependencies": {
     "bulma_scss": "^0.7.2-rc.0",
     "debounce": "^1.2.0",
-    "js-cookie": "^2.2.0",
+    "js-cookie": "^2.2.0"
   },
   "scripts": {
     "dev": "npm run development",
