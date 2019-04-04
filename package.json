@@ -1,6 +1,6 @@
 {
   "name": "cypher-bulma-javascript",
-  "version": "0.1.6",
+  "version": "0.1.7",
   "description": "NPM package with javascript functionality to Cypher Bulma extended theme.",
   "main": "index.js",
   "repository": {
@@ -23,7 +23,6 @@
     "url": "https://github.com/PayteR/cypher-bulma-javascript/issues"
   },
   "devDependencies": {
-    "babel-plugin-transform-object-rest-spread": "^6.26.0",
     "browser-sync": "^2.26.3",
     "browser-sync-webpack-plugin": "^2.0.1",
     "bulma_scss": "^0.7.2-rc.0",

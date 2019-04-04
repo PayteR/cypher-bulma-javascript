@@ -13,7 +13,7 @@ class PrivacyPolicyPanel {
       cookieKey: 'cypher-cookies-accepted'
     };
 
-    this.options = {...this.options, ...options};
+    this.options = Object.assign(this.options, options);
 
     if(autorun) {
       this.run();
