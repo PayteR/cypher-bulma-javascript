@@ -23,8 +23,8 @@ class ProductQuantityInput {
       $input.wrap('<span class="control"></span>').attr('type', 'text');
 
       $container.addClass( 'field has-addons' )
-        .append( '<span class="control"><button type="button" class="plus button is-primary">+</button></span>' )
-        .prepend( '<span class="control"><button type="button" class="minus button is-primary">-</button></span>' );
+        .append( '<span class="control"><button type="button" class="plus button is-dark">+</button></span>' )
+        .prepend( '<span class="control"><button type="button" class="minus button is-dark">-</button></span>' );
     })
 
   }
