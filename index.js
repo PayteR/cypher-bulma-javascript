@@ -8,3 +8,5 @@ exports.PrivacyPolicyPanel = require('./PrivacyPolicyPanel').default;
 
 exports.ProductQuantityInput = require('./ProductQuantityInput').default;
 
+exports.Lightbox = require('./Lightbox').default;
+
