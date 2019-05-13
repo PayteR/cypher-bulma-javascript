@@ -10,3 +10,5 @@ exports.ProductQuantityInput = require('./ProductQuantityInput').default;
 
 exports.Lightbox = require('./Lightbox').default;
 
+exports.Accordion = require('./Accordion').default;
+
