@@ -52,7 +52,9 @@ class Accordion {
     }
 
     let $accordion = $(hash)
+    this.$Accordions.find(`.${this.options.classBody}`).slideUp();
     this.$Accordions.removeClass(this.options.classOpened);
+    $accordion.find(`.${this.options.classBody}`).slideDown();
     $accordion.toggleClass(this.options.classOpened);
     history.pushState({}, '', hash);
     // window.location.hash = hash
