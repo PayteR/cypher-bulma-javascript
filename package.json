@@ -1,6 +1,6 @@
 {
   "name": "cypher-bulma-javascript",
-  "version": "0.1.13",
+  "version": "0.1.14",
   "description": "NPM package with javascript functionality to Cypher Bulma extended theme.",
   "main": "index.js",
   "repository": {

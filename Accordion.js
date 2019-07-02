@@ -11,6 +11,7 @@ class Accordion {
       classHeading: 'accordion-heading',
       classBody: 'accordion-body',
       classOpened: 'is-opened',
+      scrollToEnabled: true,
     };
 
     this.options = Object.assign(this.options, options);
@@ -24,6 +25,7 @@ class Accordion {
   run() {
 
     this.$Accordions = $(`.${this.options.class}`);
+    this.$AccordionHeadings = $(`.${this.options.classHeading}`);
 
     // Check if there are any navbar burgers
     if (this.$Accordions.length === 0) {
@@ -31,10 +33,9 @@ class Accordion {
     }
 
     // Add a click event on each of them
-    this.$Accordions.click((event) => {
+    this.$AccordionHeadings.click((event) => {
       let $accordion = $(event.currentTarget);
       let id = $accordion
-        .find(`.${this.options.classHeading}`)
         .attr("href");
       this.openAccordion(id);
       event.preventDefault();
@@ -52,9 +53,18 @@ class Accordion {
     }
 
     let $accordion = $(hash)
+    let scrollToEnabled = this.options.scrollToEnabled;
     this.$Accordions.find(`.${this.options.classBody}`).slideUp();
     this.$Accordions.removeClass(this.options.classOpened);
-    $accordion.find(`.${this.options.classBody}`).slideDown();
+    $accordion.find(`.${this.options.classBody}`).slideDown(500, function () {
+      if(!scrollToEnabled) {
+        return false;
+      }
+
+      $([document.documentElement, document.body]).animate({
+        scrollTop: $accordion.offset().top - 100
+      }, 500);
+    });
     $accordion.toggleClass(this.options.classOpened);
     history.pushState({}, '', hash);
     // window.location.hash = hash
